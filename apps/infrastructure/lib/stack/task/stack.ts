@@ -12,8 +12,8 @@ const getLambdaRelativeDirPath = (lambdaName: string) => {
 export type TaskStackProps = cdk.NestedStackProps;
 
 export class TaskStack extends cdk.NestedStack {
-  public taskTable: dynamodb.Table;
-  public getTasksLambda: nodejs.NodejsFunction;
+  public readonly taskTable: dynamodb.Table;
+  public readonly getTasksLambda: nodejs.NodejsFunction;
 
   constructor(scope: Construct, id: string, props?: TaskStackProps) {
     super(scope, id, props);
